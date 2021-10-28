@@ -1,0 +1,19 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+	setlocale(LC_ALL, "RUS");
+	cout<< "ЗАДАЙТЕ МАССИВ" << endl;
+	int n, Elenushka;
+	cin>> n;
+	
+	int* MAS = new int[n];
+
+	cin >> MAS[0]>> Elenushka;
+	for (int i = 1; i < n; i++) {
+		MAS[i] = MAS[i - 1] + Elenushka;
+		cout<< MAS[i - 1] << " ";
+	}
+	cout<< MAS[n-1];
+	return 0;
+}
